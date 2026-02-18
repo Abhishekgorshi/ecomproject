@@ -46,7 +46,7 @@ return Object.keys(tempErrors).length === 0;
     e.preventDefault();
     if(validate()){
 
-      const response = await fetch("http://localhost:8000/api/registerUser", {
+      const response = await fetch("https://ecomproject-2-ugy3.onrender.com/api/registerUser", {
         method: "post",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

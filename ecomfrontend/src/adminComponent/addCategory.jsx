@@ -1,4 +1,3 @@
-import React from 'react';
 import {Link,useNavigate} from 'react-router-dom';
 import {useState} from 'react';
 
@@ -42,7 +41,7 @@ function AddCategory ()
     if(validation()){
 
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:8000/api/createCategory",{
+      const response = await fetch("https://ecomproject-2-ugy3.onrender.com/api/createCategory",{
         method:"post",
         headers:{ Authorization: ` Bearer ${token} `
       },

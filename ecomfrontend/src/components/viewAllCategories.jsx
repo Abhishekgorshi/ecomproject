@@ -16,7 +16,7 @@ function ViewAllCategories () {
       key={cat._id}
     >
       <img
-        src={`http://localhost:8000/uploads/${cat.categoryImage}`}
+        src={`https://ecomproject-2-ugy3.onrender.com/uploads/${cat.categoryImage}`}
         alt={cat.categoryName}
       />
       <h3>{cat.categoryName}</h3>

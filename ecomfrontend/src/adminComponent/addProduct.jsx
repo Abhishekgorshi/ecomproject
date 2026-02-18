@@ -1,4 +1,3 @@
-import React from 'react';
 import { useContext,useState } from 'react';
 import { AppContext } from '../context/ProvideContext';
 import {useNavigate,Link} from 'react-router-dom';
@@ -63,7 +62,7 @@ const AddProduct = () => {
     const token = localStorage.getItem("token");
 e.preventDefault();
 if(validation()){
- const response = await fetch('http://localhost:8000/api/createProduct',{
+ const response = await fetch('https://ecomproject-2-ugy3.onrender.com/api/createProduct',{
   method:"post",
   headers:{
     Authorization:`Bearer ${token}`

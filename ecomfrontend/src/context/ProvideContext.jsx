@@ -8,7 +8,7 @@ function ProvideContext({ children }) {
   const [categories, setCategory] = useState([]);
   const Navigate = useNavigate();
   useEffect(() => {
-    fetch("http://localhost:8000/api")
+    fetch("https://ecomproject-2-ugy3.onrender.com/api")
       .then(res => res.json())
       .then(response => {
         setCategory(response.data.category);

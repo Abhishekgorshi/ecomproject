@@ -56,7 +56,7 @@ function Category() {
               }}
             >
               <img
-                src={`http://localhost:8000/uploads/${cat.categoryImage}`}
+                src={`https://ecomproject-2-ugy3.onrender.com/uploads/${cat.categoryImage}`}
                 className="rounded-circle"
                 style={{
                   width: "180px",

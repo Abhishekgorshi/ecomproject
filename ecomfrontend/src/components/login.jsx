@@ -30,7 +30,7 @@ function Login () {
   const handleSubmit = async(e) => {
 e.preventDefault();
 if(validation()){
-  const response = await fetch("http://localhost:8000/api/loginUser",{
+  const response = await fetch("https://ecomproject-2-ugy3.onrender.com/api/loginUser",{
     method:"post",
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify(formData)

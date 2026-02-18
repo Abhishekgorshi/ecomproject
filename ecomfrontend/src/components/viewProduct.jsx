@@ -10,7 +10,7 @@ function ViewProduct () {
   
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/viewProduct/${productId}`)
+    fetch(`https://ecomproject-2-ugy3.onrender.com/api/viewProduct/${productId}`)
     .then(res => res.json())
     .then(response => setProduct(response.data))
     .catch(error => console.log(error))
@@ -19,7 +19,7 @@ function ViewProduct () {
  return (<>
     <Link to={'/'}>Back</Link>
   <div className="view-product-container">
-    <img src={`http://localhost:8000/uploads/${product.productImage}`} alt={product.productName} />
+    <img src={`https://ecomproject-2-ugy3.onrender.com/uploads/${product.productImage}`} alt={product.productName} />
     <p>{product.productName}</p>
     <p>Price: ₹{product.productPrice}</p>
     <p>Quantity: {product.productQuantity}</p>

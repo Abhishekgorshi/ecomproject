@@ -11,7 +11,7 @@ function Cart(){
      purchaseQuantity: items.quantity
     }))
     try{
-const response = await fetch("http://localhost:8000/api/purchased",
+const response = await fetch("https://ecomproject-2-ugy3.onrender.com/api/purchased",
   {method:"POST",
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({Items})
@@ -46,7 +46,7 @@ console.log(error)
  
  
   <div className="cart-item" key={index}>
-     <img src={`http://localhost:8000/uploads/${cp.productImage}`} alt="productImage"/>
+     <img src={`https://ecomproject-2-ugy3.onrender.com/uploads/${cp.productImage}`} alt="productImage"/>
      <div className="cart-details">
      <p>{cp.productName}</p> 
      <p className="cart-price">₹{cp.productPrice}</p> 

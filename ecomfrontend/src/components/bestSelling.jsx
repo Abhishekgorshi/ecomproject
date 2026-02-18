@@ -40,7 +40,7 @@ function BestSelling() {
 
         <figure>
           <img
-            src={`http://localhost:8000/uploads/${pbs.productImage}`}
+            src={`https://ecomproject-2-ugy3.onrender.com/uploads/${pbs.productImage}`}
             alt={pbs.productName}
             className="img-fluid"
           />

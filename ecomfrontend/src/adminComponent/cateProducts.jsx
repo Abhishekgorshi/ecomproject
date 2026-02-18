@@ -7,7 +7,7 @@ const AdminCateProducts = () => {
   const {CatId} = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/CateProducts/${CatId}`)
+    fetch(`https://ecomproject-2-ugy3.onrender.com/api/CateProducts/${CatId}`)
       .then(res => res.json())
       .then(response => setAllProducts(response.data))
       .catch(error => console.log(error))
@@ -24,7 +24,7 @@ const AdminCateProducts = () => {
       {allproducts.map(product => (
         <div className="cat-card" key={product._id}>
         <Link to={`/adminviewProduct/${product._id}`}>  <img
-            src={`http://localhost:8000/uploads/${product.productImage}`}
+            src={`https://ecomproject-2-ugy3.onrender.com/uploads/${product.productImage}`}
             alt={product.productName}
           />
           <h3>{product.productName}</h3>

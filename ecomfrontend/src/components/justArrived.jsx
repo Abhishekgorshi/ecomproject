@@ -55,7 +55,7 @@ function Just() {
     className="product-link text-decoration-none text-dark d-block"
   >
     <img
-      src={`http://localhost:8000/uploads/${pr.productImage}`}
+      src={`https://ecomproject-2-ugy3.onrender.com/uploads/${pr.productImage}`}
       alt={pr.productName}
       style={{ width: "100%", height: "180px", objectFit: "cover" }}
     />

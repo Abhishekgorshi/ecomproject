@@ -9,7 +9,7 @@ const {handleLogout} = useContext(AppContext);
 useEffect( () => {
   const fetchAdmin= async ()=>{
   const token = localStorage.getItem("token")
-  const response= await fetch("http://localhost:8000/api/adminCorner",{
+  const response= await fetch("https://ecomproject-2-ugy3.onrender.com/api/adminCorner",{
     headers:{
       Authorization:`Bearer ${token}`
     }
@@ -23,7 +23,7 @@ fetchAdmin();
 
 const deleteProduct = async(productId) => {
 
-const response=await fetch(`http://localhost:8000/api/deleteProduct/${productId}`)
+const response=await fetch(`https://ecomproject-2-ugy3.onrender.com/api/deleteProduct/${productId}`)
     const data = await response.json();
     alert(data.message)
 }
@@ -43,7 +43,7 @@ const response=await fetch(`http://localhost:8000/api/deleteProduct/${productId}
     { products.map(pr => ( 
       <div key={pr._id} class="product-card">
     <Link to={`/adminviewProduct/${ pr._id }`}> 
-      <img src={`http://localhost:8000/uploads/${ pr.productImage }`} alt=""/>
+      <img src={`https://ecomproject-2-ugy3.onrender.com/uploads/${ pr.productImage }`} alt=""/>
         <h3>{ pr.productName }</h3>
          <p>₹ { pr.productPrice }</p>
       </Link>

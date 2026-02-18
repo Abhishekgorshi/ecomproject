@@ -22,7 +22,7 @@ function EditProduct() {
     const fetchProduct = async () => {
       try {
         const token = localStorage.getItem("token"); // if auth needed
-        const res = await fetch(`http://localhost:8000/api/viewProduct/${productId}`, {
+        const res = await fetch(`https://ecomproject-2-ugy3.onrender.com/api/viewProduct/${productId}`, {
           headers: token ? { Authorization: `Bearer ${token}` } : {}
         });
         const data = await res.json();
@@ -92,7 +92,7 @@ function EditProduct() {
       formData.append("productDescription", product.productDescription);
       formData.append("productCategory", product.productCategory);
 
-      const res = await fetch(`http://localhost:8000/api/updateProduct/${productId}`, {
+      const res = await fetch(`https://ecomproject-2-ugy3.onrender.com/api/updateProduct/${productId}`, {
         method: "POST",
         body: formData
       });

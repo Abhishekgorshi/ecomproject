@@ -41,7 +41,7 @@ const handleChange = (e) => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   if(validate()){
-  const response = await fetch('http://localhost:8000/api/registerAdmin',{
+  const response = await fetch('https://ecomproject-2-ugy3.onrender.com/api/registerAdmin',{
       method:"post",
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify(formData)

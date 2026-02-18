@@ -33,7 +33,7 @@ return Object.keys(temError).length === 0;
 e.preventDefault();
 if(validation()){
 
-const response = await fetch("http://localhost:8000/api/loginAdmin",{
+const response = await fetch("https://ecomproject-2-ugy3.onrender.com/api/loginAdmin",{
   method:"post",
   headers:{"Content-Type":"application/json"},
   body:JSON.stringify(formData)

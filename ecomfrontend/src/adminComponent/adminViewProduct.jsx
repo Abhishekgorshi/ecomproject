@@ -5,7 +5,7 @@ function AdminViewProduct () {
   const [product,setProduct] = useState([]);
   const {productId} = useParams();
   useEffect(() => {
-    fetch(`http://localhost:8000/api/viewProduct/${productId}`)
+    fetch(`https://ecomproject-2-ugy3.onrender.com/api/viewProduct/${productId}`)
     .then(res => res.json())
     .then(response => setProduct(response.data))
     .catch(error => console.log(error))
@@ -14,7 +14,7 @@ function AdminViewProduct () {
   return (
     <div>
       <Link to={'/adminallproducts'}>back</Link>
-      <img src={`http://localhost:8000/uploads/${product.productImage}`} alt='product' />
+      <img src={`https://ecomproject-2-ugy3.onrender.com/uploads/${product.productImage}`} alt='product' />
       <p>{product.productName}</p>
       <p>{product.productPrice}</p>
       <p>{product.productQuantity}</p>

@@ -58,7 +58,7 @@ const scrollRight = () => {
   className="product-link text-decoration-none text-dark"
 >
       <img
-        src={`http://localhost:8000/uploads/${p.productImage}`}
+        src={`https://ecomproject-2-ugy3.onrender.com/uploads/${p.productImage}`}
         alt={p.productName}
         style={{ width: "100%", height: "180px", objectFit: "cover" }}
       />

@@ -49,7 +49,7 @@ function EditCategory() {
       formData.append("categoryName", category.categoryName);
       if(category.categoryImage) formData.append("categoryImage", category.categoryImage);
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:8000/api/updateCategory/${categoryId}`, {
+      const res = await fetch(`https://ecomproject-2-ugy3.onrender.com/api/updateCategory/${categoryId}`, {
         method: "PUT",
         headers:{Authorization:`bearer ${token}`},
         body: formData
