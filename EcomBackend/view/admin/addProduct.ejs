@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<link rel="stylesheet" href="/css/style.css">
+
+  </head>
+  <body><a href="/adminCorner">back</a>
+    <form method="post" action="/createProduct" enctype="multipart/form-data">
+      <label>Name:</label>
+      <input name="productName" type="text">
+      <label>Price:</label>
+      <input name="productPrice" type="text">
+      <select name="productCategory">
+        <option value="">Select Category</option>
+      <% categories.forEach(cate => { %>
+      <option value="<%= cate._id %>"><%= cate.categoryName %></option>
+      <% }) %>
+      </select>
+      <label>Image:</label>
+      <input name="productImage" type="file">
+      <label>Quantity:</label>
+      <input name="productQuantity" type="number">
+     <button type="submit">Add Product</button>
+    </form>
+  </body>
+</html>

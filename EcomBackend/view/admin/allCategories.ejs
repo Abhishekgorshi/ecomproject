@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <a href="/adminCorner" class="back-link">← Back</a>
+
+  <div class="category-container">
+    <% categories.forEach(cat => { %>
+      <a href="/CateProducts/<%= cat._id %>" class="category-card">
+        <img src="/uploads/<%= cat.categoryImage %>" alt="<%= cat.categoryName %>">
+        <h3><%= cat.categoryName %></h3>
+      </a>
+    <% }) %>
+  </div>
+
+  <a href="/addCategory" class="add-category">+ Add new category</a>
+</body>
+</html>

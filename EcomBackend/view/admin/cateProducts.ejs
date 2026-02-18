@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <a href="/categories" class="back-link">← Back</a>
+
+  <div class="products-container">
+    <% cateProducts.forEach(product => { %>
+      <div class="product-card">
+        <img src="/uploads/<%= product.productImage %>" alt="<%= product.productName %>">
+
+        <h3><%= product.productName %></h3>
+
+        <p class="qty">Quantity: <%= product.productQuantity %></p>
+
+        <p class="price">₹ <%= product.productPrice %></p>
+      </div>
+    <% }) %>
+  </div>
+
+</body>
+</html>

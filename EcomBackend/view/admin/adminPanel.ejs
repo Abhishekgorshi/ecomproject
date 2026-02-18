@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <h1>Admin Panel</h1>
+
+  <nav class="navbar">
+    <a href="/addProducts">Add Product</a>
+    <a href="/allProducts">All Products</a>
+    <a href="/categories">Categories</a>
+    <a href="/">back</a>
+  </nav>
+
+  <div class="products">
+    <% products.forEach(pr => { %>
+    <a href="/<%= pr._id %>">  <div class="product-card">
+        <img src="/uploads/<%= pr.productImage %>" alt="">
+        <h3><%= pr.productName %></h3>
+        <p>₹ <%= pr.productPrice %></p>
+      </div>
+      </a>
+    <% }) %>
+  </div>
+
+</body>
+</html>
