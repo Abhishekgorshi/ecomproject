@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 function DiscountBanner () {
   return(
 <section class="py-3">
@@ -13,7 +14,7 @@ function DiscountBanner () {
                   <div class="content-wrapper text-light">
                     <h3 class="banner-title text-light">Items on SALE</h3>
                     <p>Discounts up to 30%</p>
-                    <a href="#" class="btn-link text-white">Shop Now</a>
+                    <Link to={"/"} class="btn-link text-white">Shop Now</Link>
                   </div>
                 </div>
               </div>
@@ -23,7 +24,7 @@ function DiscountBanner () {
                   <div class="content-wrapper text-light">
                     <h3 class="banner-title text-light">Combo offers</h3>
                     <p>Discounts up to 50%</p>
-                    <a href="#" class="btn-link text-white">Shop Now</a>
+                    <Link to={"/"} class="btn-link text-white">Shop Now</Link>
                   </div>
                 </div>
               </div>
@@ -33,7 +34,7 @@ function DiscountBanner () {
                   <div class="content-wrapper text-light">
                     <h3 class="banner-title text-light">Discount Coupons</h3>
                     <p>Discounts up to 40%</p>
-                    <a href="#" class="btn-link text-white">Shop Now</a>
+                    <Link to={"/"} class="btn-link text-white">Shop Now</Link>
                   </div>
                 </div>
               </div>

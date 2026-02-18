@@ -50,7 +50,7 @@ function AddCategory ()
     })
     const data = await response.json();
 
-    if(data.success == false){
+    if(data.success === false){
       setError({serverError:data.message})
     }
     else{

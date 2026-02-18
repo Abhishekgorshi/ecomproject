@@ -1,259 +1,144 @@
-function Footer () {
-  return(
-  
-    <>
-    <section class="pb-4 my-4">
-      <div class="container-lg">
+import { Link } from "react-router-dom";
 
-        <div class="bg-warning pt-5 rounded-5">
-          <div class="container">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-md-4">
-                <h2 class="mt-5">Download Organic App</h2>
-                <p>Online Orders made easy, fast and reliable</p>
-                <div class="d-flex gap-2 flex-wrap mb-5">
-                  <a href="#" title="App store"><img src="images/img-app-store.png" alt="app-store" /></a>
-                  <a href="#" title="Google Play"><img src="images/img-google-play.png" alt="google-play" /></a>
+function Footer() {
+  return (
+    <>
+      <section className="pb-4 my-4">
+        <div className="container-lg">
+          <div className="bg-warning pt-5 rounded-5">
+            <div className="container">
+              <div className="row justify-content-center align-items-center">
+                <div className="col-md-4">
+                  <h2 className="mt-5">Download Organic App</h2>
+                  <p>Online Orders made easy, fast and reliable</p>
+
+                  <div className="d-flex gap-2 flex-wrap mb-5">
+                    <Link to="/" title="App store">
+                      <img src="images/img-app-store.png" alt="app-store" />
+                    </Link>
+                    <Link to="/" title="Google Play">
+                      <img src="images/img-google-play.png" alt="google-play" />
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="col-md-5">
+                  <img
+                    src="images/banner-onlineapp.png"
+                    alt="phone"
+                    className="img-fluid"
+                  />
                 </div>
               </div>
-              <div class="col-md-5">
-                <img src="images/banner-onlineapp.png" alt="phone" class="img-fluid" />
-              </div>
             </div>
           </div>
         </div>
-        
-      </div>
-    </section>
+      </section>
 
-    <section class="py-4">
-      <div class="container-lg">
-        <h2 class="my-4">People are also looking for</h2>
-        <a href="#" class="btn btn-warning me-2 mb-2">Blue diamon almonds</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Angie’s Boomchickapop Corn</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Salty kettle Corn</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Chobani Greek Yogurt</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Sweet Vanilla Yogurt</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Foster Farms Takeout Crispy wings</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Warrior Blend Organic</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Chao Cheese Creamy</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Chicken meatballs</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Blue diamon almonds</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Angie’s Boomchickapop Corn</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Salty kettle Corn</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Chobani Greek Yogurt</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Sweet Vanilla Yogurt</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Foster Farms Takeout Crispy wings</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Warrior Blend Organic</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Chao Cheese Creamy</a>
-        <a href="#" class="btn btn-warning me-2 mb-2">Chicken meatballs</a>
-      </div>
-    </section>
+      {/* People looking for */}
+      <section className="py-4">
+        <div className="container-lg">
+          <h2 className="my-4">People are also looking for</h2>
 
-    <section class="py-5">
-      <div class="container-lg">
-        <div class="row row-cols-1 row-cols-sm-3 row-cols-lg-5">
-          <div class="col">
-            <div class="card mb-3 border border-dark-subtle p-3">
-              <div class="text-dark mb-3">
-                <svg width="32" height="32"><use href="#package"></use></svg>
-              </div>
-              <div class="card-body p-0">
-                <h5>Free delivery</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
-              </div>
+          {[
+            "Blue diamon almonds",
+            "Angie’s Boomchickapop Corn",
+            "Salty kettle Corn",
+            "Chobani Greek Yogurt",
+            "Sweet Vanilla Yogurt",
+            "Foster Farms Takeout Crispy wings",
+            "Warrior Blend Organic",
+            "Chao Cheese Creamy",
+            "Chicken meatballs",
+          ].map((item, i) => (
+            <Link key={i} to="/" className="btn btn-warning me-2 mb-2">
+              {item}
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Bottom */}
+      <div id="footer-bottom">
+        <div className="container-lg">
+          <div className="row">
+            <div className="col-md-6 copyright">
+              <p>© 2024 Organic. All rights reserved.</p>
             </div>
-          </div>
-          <div class="col">
-            <div class="card mb-3 border border-dark-subtle p-3">
-              <div class="text-dark mb-3">
-                <svg width="32" height="32"><use href="#secure"></use></svg>
-              </div>
-              <div class="card-body p-0">
-                <h5>100% secure payment</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card mb-3 border border-dark-subtle p-3">
-              <div class="text-dark mb-3">
-                <svg width="32" height="32"><use href="#quality"></use></svg>
-              </div>
-              <div class="card-body p-0">
-                <h5>Quality guarantee</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card mb-3 border border-dark-subtle p-3">
-              <div class="text-dark mb-3">
-                <svg width="32" height="32"><use href="#savings"></use></svg>
-              </div>
-              <div class="card-body p-0">
-                <h5>guaranteed savings</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card mb-3 border border-dark-subtle p-3">
-              <div class="text-dark mb-3">
-                <svg width="32" height="32"><use href="#offers"></use></svg>
-              </div>
-              <div class="card-body p-0">
-                <h5>Daily offers</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipi elit.</p>
-              </div>
+
+            <div className="col-md-6 text-start text-md-end">
+              <p>
+                HTML Template by{" "}
+                <a
+                  href="https://templatesjungle.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  TemplatesJungle
+                </a>{" "}
+                Distributed By{" "}
+                <a
+                  href="https://themewagon.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  ThemeWagon
+                </a>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-   
-    <div id="footer-bottom">
-      <div class="container-lg">
-        <div class="row">
-          <div class="col-md-6 copyright">
-            <p>© 2024 Organic. All rights reserved.</p>
-          </div>
-          <div class="col-md-6 credit-link text-start text-md-end">
-            <p>HTML Template by <a href="https://templatesjungle.com/">TemplatesJungle</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a> </p>
-          </div>
-        </div>
-      </div>
-    </div>
-     <footer class="py-5">
-      <div class="container-lg">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="footer-menu">
+      {/* Footer menu */}
+      <footer className="py-5">
+        <div className="container-lg">
+          <div className="row">
+            <div className="col-lg-3 col-md-6 col-sm-6">
               <img src="images/logo.svg" width="240" height="70" alt="logo" />
-              <div class="social-links mt-3">
-                <ul class="d-flex list-unstyled gap-2">
-                  <li>
-                    <a href="#" class="btn btn-outline-light">
-                      <svg width="16" height="16"><use href="#facebook"></use></svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="btn btn-outline-light">
-                      <svg width="16" height="16"><use href="#twitter"></use></svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="btn btn-outline-light">
-                      <svg width="16" height="16"><use href="#youtube"></use></svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="btn btn-outline-light">
-                      <svg width="16" height="16"><use href="#instagram"></use></svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="btn btn-outline-light">
-                      <svg width="16" height="16"><use href="#amazon"></use></svg>
-                    </a>
-                  </li>
-                </ul>
+
+              <div className="mt-3 d-flex gap-2">
+                {["facebook", "twitter", "youtube", "instagram"].map(
+                  (icon, i) => (
+                    <Link key={i} to="/" className="btn btn-outline-light">
+                      {icon}
+                    </Link>
+                  )
+                )}
               </div>
             </div>
-          </div>
 
-          <div class="col-md-2 col-sm-6">
-            <div class="footer-menu">
-              <h5 class="widget-title">Organic</h5>
-              <ul class="menu-list list-unstyled">
-                <li class="menu-item">
-                  <a href="#" class="nav-link">About us</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Conditions </a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Our Journals</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Careers</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Affiliate Programme</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Ultras Press</a>
-                </li>
-              </ul>
+            <div className="col-md-2 col-sm-6">
+              <h5>Organic</h5>
+              {["About us", "Conditions", "Careers"].map((item, i) => (
+                <Link key={i} to="/" className="nav-link">
+                  {item}
+                </Link>
+              ))}
+            </div>
+
+            <div className="col-md-2 col-sm-6">
+              <h5>Quick Links</h5>
+              {["Offers", "Coupons", "Stores"].map((item, i) => (
+                <Link key={i} to="/" className="nav-link">
+                  {item}
+                </Link>
+              ))}
+            </div>
+
+            <div className="col-md-2 col-sm-6">
+              <h5>Customer Service</h5>
+              {["FAQ", "Contact", "Privacy"].map((item, i) => (
+                <Link key={i} to="/" className="nav-link">
+                  {item}
+                </Link>
+              ))}
             </div>
           </div>
-          <div class="col-md-2 col-sm-6">
-            <div class="footer-menu">
-              <h5 class="widget-title">Quick Links</h5>
-              <ul class="menu-list list-unstyled">
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Offers</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Discount Coupons</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Stores</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Track Order</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Shop</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Info</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-6">
-            <div class="footer-menu">
-              <h5 class="widget-title">Customer Service</h5>
-              <ul class="menu-list list-unstyled">
-                <li class="menu-item">
-                  <a href="#" class="nav-link">FAQ</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Contact</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Privacy Policy</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Returns & Refunds</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Cookie Guidelines</a>
-                </li>
-                <li class="menu-item">
-                  <a href="#" class="nav-link">Delivery Information</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="footer-menu">
-              <h5 class="widget-title">Subscribe Us</h5>
-              <p>Subscribe to our newsletter to get updates about our grand offers.</p>
-              <form class="d-flex mt-3 gap-0" action="/">
-                <input class="form-control rounded-start rounded-0 bg-light" type="email" placeholder="Email Address" aria-label="Email Address" />
-                <button class="btn btn-dark rounded-end rounded-0" type="submit">Subscribe</button>
-              </form>
-            </div>
-          </div>
-          
         </div>
-      </div>
-    </footer>
+      </footer>
     </>
-  )
+  );
 }
+
 export default Footer;

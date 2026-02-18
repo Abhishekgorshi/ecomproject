@@ -72,7 +72,7 @@ if(validation()){
 })
 .catch(err => console.log("error"+err));
  const data = await response.json();
- if(data.success == true){
+ if(data.success === true){
   alert(data.message)
   Navigate("/adminPanel");
  }

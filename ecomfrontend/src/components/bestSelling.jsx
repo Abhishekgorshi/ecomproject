@@ -61,11 +61,11 @@ function BestSelling() {
             </svg>
 
             <span className="rating">
-              <svg width="18" height="18" className="text-warning"><use href="#star-full" /></svg>
-              <svg width="18" height="18" className="text-warning"><use href="#star-full" /></svg>
-              <svg width="18" height="18" className="text-warning"><use href="#star-full" /></svg>
-              <svg width="18" height="18" className="text-warning"><use href="#star-full" /></svg>
-              <svg width="18" height="18" className="text-warning"><use href="#star-half" /></svg>
+              <svg width="18" height="18" className="text-warning"><use href="/" /></svg>
+              <svg width="18" height="18" className="text-warning"><use href="/" /></svg>
+              <svg width="18" height="18" className="text-warning"><use href="/" /></svg>
+              <svg width="18" height="18" className="text-warning"><use href="/" /></svg>
+              <svg width="18" height="18" className="text-warning"><use href="/" /></svg>
             </span>
             <span>(222)</span>
           </div>

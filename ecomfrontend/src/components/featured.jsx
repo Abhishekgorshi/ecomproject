@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Featured() {
   const { products } = useContext(AppContext);
-  const {cart,addTocart} =useContext(CartContext);
+  const {addTocart} =useContext(CartContext);
   const scrollRef = useRef(null);
   const [purchaseQuantity,setpurchaseQuantity] = useState([]);
 
@@ -74,11 +74,11 @@ const scrollRight = () => {
               </svg>
 
                       <span class="rating">
-                        <svg width="18" height="18" class="text-warning"><use href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use href="#star-full"></use></svg>
-                        <svg width="18" height="18" class="text-warning"><use href="#star-half"></use></svg>
+                        <svg width="18" height="18" class="text-warning"><use href="/"></use></svg>
+                        <svg width="18" height="18" class="text-warning"><use href="/"></use></svg>
+                        <svg width="18" height="18" class="text-warning"><use href="/"></use></svg>
+                        <svg width="18" height="18" class="text-warning"><use href="/"></use></svg>
+                        <svg width="18" height="18" class="text-warning"><use href="/"></use></svg>
                       </span>
                       <span>(222)</span>
                     </div>
