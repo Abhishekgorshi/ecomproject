@@ -15,7 +15,7 @@ const ViewAllProducts = () => {
   <div className="products-grid">
     {products.map((p) => (
       <div className="product-card" key={p._id}>
-        <img src={`http://localhost:8000/uploads/${p.productImage}`} />
+        <img src={`http://localhost:8000/uploads/${p.productImage}`} alt='productimage' />
         <p className="product-name">{p.productName}</p>
         <p className="product-price">₹{p.productPrice}</p>
         <p>{p.productDescription}</p>

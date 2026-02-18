@@ -47,7 +47,7 @@ const handleSubmit = async (e) => {
       body:JSON.stringify(formData)
     });
   const data = await response.json();
-  if(data.success == false){
+  if(data.success === false){
     setErrors({serverError:data.message})
   }
   else{

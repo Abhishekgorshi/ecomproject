@@ -54,7 +54,7 @@ return Object.keys(tempErrors).length === 0;
       
       const data = await response.json();
       console.log(data);
-      if(data.success == false){
+      if(data.success === false){
         setError({servererror : data.message})
       }
       else{

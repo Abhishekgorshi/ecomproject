@@ -14,7 +14,7 @@ function ViewProduct () {
     .then(res => res.json())
     .then(response => setProduct(response.data))
     .catch(error => console.log(error))
-  },[])
+  },[productId])
   
  return (<>
     <Link to={'/'}>Back</Link>

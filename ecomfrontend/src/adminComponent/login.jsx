@@ -39,7 +39,7 @@ const response = await fetch("http://localhost:8000/api/loginAdmin",{
   body:JSON.stringify(formData)
 })
 const data = await response.json();
-if(data.success == false){
+if(data.success === false){
   setError({servererror:data.message})
 }
 else{

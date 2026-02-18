@@ -18,7 +18,7 @@ const response = await fetch("http://localhost:8000/api/purchased",
   })
   const data = await response.json();
    
-  if(data.success == true){
+  if(data.success === true){
 
     clearCart();
     
@@ -40,13 +40,13 @@ console.log(error)
 <div className="cart-container">
 <Link  className="cart-back" to={"/"}>back</Link>
 
-{cart.length == 0 &&
+{cart.length === 0 &&
  <p>cart is empty</p>}
 {cart.map((cp,index) =>
  
  
   <div className="cart-item" key={index}>
-     <img src={`http://localhost:8000/uploads/${cp.productImage}`}/>
+     <img src={`http://localhost:8000/uploads/${cp.productImage}`} alt="productImage"/>
      <div className="cart-details">
      <p>{cp.productName}</p> 
      <p className="cart-price">₹{cp.productPrice}</p> 

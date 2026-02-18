@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Just() {
   const { products } = useContext(AppContext);
-  const { cart, addTocart } = useContext(CartContext);
+  const { addTocart } = useContext(CartContext);
   const [purchaseQuantity,setpurchaseQuantity] = useState([]);
   const scrollRef = useRef(null);
 
